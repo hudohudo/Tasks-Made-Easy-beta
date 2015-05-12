@@ -1,3 +1,11 @@
 Basic things this program this needs:
 
-1)
+Notifier
+	- Calendar Reader/Standalone Calendar
+	- Access to notifications
+	- Ability to create notifications
+
+Location Tracker
+	- GPS access
+	- Access to Yelp! and other restaurant trackers
+
