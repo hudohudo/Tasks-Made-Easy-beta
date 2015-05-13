@@ -1,8 +1,11 @@
-public class Event extends Task{
+public class Event extends Task
+{
 
 	private Date dateToNotify;
 
-	public Event(){
-		
+	public Event(String nameOfEvent, Date DateOfEvent)
+	{
+			super(nameOfEvent, DateOfEvent)
+
 	}
 }
