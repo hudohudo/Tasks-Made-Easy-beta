@@ -1,4 +1,5 @@
 5/12/2015
+Hudson Havenhill
 v0.0.1 pre-alpha build 1 nightly
 name:51215v001nightly.zip
 	- Added Task class
@@ -12,12 +13,14 @@ name:51215v001nightly.zip
 		- method called addTasks which passes a Task object and adds it to the myTasks ArrayList
 
 5/12/2015
+Hudson Havenhill
 v0.0.1.1 pre-alpha build 2 nightly
 name:51215v0011nightly.zip
 	- Added TaskRunner for testing purposes
 	- Made myTasks in TasksMadeEsay.java public, so making a runner is much easier. This may change
 
 5/12/2015
+Hudson Havenhill
 v0.0.1.2 pre-alpha build 3 nightly
 name:51215v0012nightly.zip
 	- Made TasksMadeEasy.java not abstract
@@ -28,6 +31,7 @@ name:51215v0012nightly.zip
 	- added more tests to TaskRunner
 
 5/13/2015
+Hudson Havenhill and Eric Qian
 v0.0.1.3 pre-alpha build 1 nightly
 name:51315v0013nightly.zip
 	- Created a class called Event that extends Task
