@@ -9,4 +9,4 @@ public abstract class TasksMadeEasy {
 	public addTasks(Task newTask){
 		myTasks.add(newTask);
 	}
-}s
+}
