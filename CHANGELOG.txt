@@ -1,4 +1,6 @@
 5/12/2015
+v0.0.1 pre-alpha build 1 nightly
+name:51215v001nightly.zip
 	- Added Task class
 		- includes private instance variables for the name, details, and a Date object, also includes an int priority
 		- includes get and set methods for the instance variables
