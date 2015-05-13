@@ -3,9 +3,10 @@ public class Event extends Task
 
 	private Date dateToNotify;
 
-	public Event(String nameOfEvent, Date DateOfEvent)
+	public Event(String nameOfEvent, Date dateOfEvent, int m, int d, int y)
 	{
-			super(nameOfEvent, DateOfEvent)
+			super(nameOfEvent, dateOfEvent);
+			dateToNotify = new Date(m, d, y);
 
 	}
 }
