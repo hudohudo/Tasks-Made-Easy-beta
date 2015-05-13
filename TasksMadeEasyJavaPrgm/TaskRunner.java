@@ -1,4 +1,4 @@
-public class TaskRunner{\
+public class TaskRunner{
 	public static void main(String[] args){
 		TasksMadeEasy mainTasks = new TasksMadeEasy();
 		Date theDate = new Date (5, 12, 2015)
