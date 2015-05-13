@@ -1,0 +1,10 @@
+5/12/2015
+	- Added Task class
+		- includes private instance variables for the name, details, and a Date object, also includes an int priority
+		- includes get and set methods for the instance variables
+	- Added Date class
+		- has a day, month, and year ints that all have get and set methods
+	- Added TasksMadeEasy class
+		- Includes an ArrayList called myTasks which is made up of Task objects.
+		- Constructor is so far empty
+		- method called addTasks which passes a Task object and adds it to the myTasks ArrayList
