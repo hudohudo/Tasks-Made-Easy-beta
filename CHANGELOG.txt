@@ -13,6 +13,16 @@ name:51215v001nightly.zip
 
 5/12/2015
 v0.0.1.1 pre-alpha build 2 nightly
-name:51215v00011nightly.zip
+name:51215v0011nightly.zip
 	- Added TaskRunner for testing purposes
 	- Made myTasks in TasksMadeEsay.java public, so making a runner is much easier. This may change
+
+5/12/2015
+v0.0.1.2 pre-alpha build 3 nightly
+name:51215v0012nightly.zip
+	- Made TasksMadeEasy.java not abstract
+	- Declared myTasks in TasksMadeEasy contructor
+	- deleted addTask method
+	- added a sortByPriority method to TasksMadeEasy that sorts based on int priority
+		- doesn't switch Tasks with the same priority level
+	- added more tests to TaskRunner

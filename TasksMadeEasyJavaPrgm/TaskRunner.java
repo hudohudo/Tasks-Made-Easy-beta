@@ -6,5 +6,8 @@ public class TaskRunner{\
 		String name = scan.nextLine();
 		mainTasks.addTasks(new Task(name, theDate));
 		mainTasks.myTasks.get(0).setPriority(3);
+		mainTasks.myTasks.add("Stuff", new Date(2, 2, 2012));
+		mainTasks.myTasks.get(1).setPriority(2);
+		mainTasks.sortByPriority();
 	}
 }
