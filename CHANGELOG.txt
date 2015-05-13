@@ -26,3 +26,10 @@ name:51215v0012nightly.zip
 	- added a sortByPriority method to TasksMadeEasy that sorts based on int priority
 		- doesn't switch Tasks with the same priority level
 	- added more tests to TaskRunner
+
+5/13/2015
+v0.0.1.3 pre-alpha build 1 nightly
+name:51315v0013nightly.zip
+	- Created a class called Event that extends Task
+		- includes instance variable dateToNotify that is a Date obj
+		- 
