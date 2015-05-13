@@ -36,4 +36,4 @@ v0.0.1.3 pre-alpha build 1 nightly
 name:51315v0013nightly.zip
 	- Created a class called Event that extends Task
 		- includes instance variable dateToNotify that is a Date obj
-		- 
+		- adds a new method getDateToNotify that returns dateToNotify
