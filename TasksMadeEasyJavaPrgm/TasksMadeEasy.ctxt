@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TasksMadeEasy()
+comment1.params=
+comment1.target=java.util.ArrayList\ getTaskLists()
+comment2.params=
+comment2.target=java.util.ArrayList\ sortByPriority()
+comment3.params=t
+comment3.target=void\ addNewTask(Task)
+numComments=4

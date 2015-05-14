@@ -1,7 +1,9 @@
+import java.util.List;
+import java.util.ArrayList;
 public class TasksMadeEasy {
 	
-	//This may not stay public, idk yet
-	public List<Task> myTasks;
+	//This will not stay public, just need it for testing purposes
+	public ArrayList<Task> myTasks;
 
 	public TasksMadeEasy(){
 			myTasks = new ArrayList<Task>();
@@ -12,14 +14,18 @@ public class TasksMadeEasy {
 	}
 
 	public ArrayList<Task> sortByPriority(){
-		ArrayList<Task> temp = myTasks;
-		for(int ind = 1;ind<temp.size();ind++){
-			if(temp.get(ind - 1).getPriority() > temp.get(ind).getPriority()){
-				Task tempTask = temp.get(ind);
-				temp.get(ind) = temp.get(ind - 1);
-				temp.get(ind - 1) = tempTask;
+		for(int ind = 1;ind<myTasks.size();ind++){
+			if(myTasks.get(ind - 1).getPriority() > myTasks.get(ind).getPriority()){
+				Task tempTask = myTasks.get(ind);
+				myTasks.set(ind, myTasks.get(ind - 1));
+				myTasks.set(ind - 1, tempTask);
 			}
 		}
+		return myTasks;
 	}
+	
+	public void addNewTask(Task t){
+	    myTasks.add(t);
+	   }
 
 }

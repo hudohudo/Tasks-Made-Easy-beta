@@ -1,3 +1,4 @@
+import java.util.Date;
 public class Task{
 	private String taskName;	
 	private String taskDetails;
@@ -6,7 +7,7 @@ public class Task{
 
 	public Task(String nameOfTask, Date dateOfTask){
 		taskName = nameOfTask;
-		taskDetails = dateOfTask;
+		taskDate = dateOfTask;
 	}
 
 	public void setTaskName(String val){

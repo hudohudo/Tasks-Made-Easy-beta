@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=nameOfEvent\ dateOfEvent\ m\ d\ y
+comment0.target=Event(java.lang.String,\ java.util.Date,\ int,\ int,\ int)
+comment1.params=
+comment1.target=java.util.Date\ getDateToNotify()
+numComments=2

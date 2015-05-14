@@ -52,3 +52,17 @@ name:51315v0014nightly.zip
 	- days is now a ArrayList<Task>
 	- Started building the Resources.java class
 		- Contains information for the GUI using get methods
+
+5/14/2015
+Hudson Havenhill
+v0.0.1.5 pre-alpha build 1 nightly
+name:51415v0015nightly.zip
+	- Deleted Date.java
+	- Fixed some bugs
+	- Restructured other classes to work with java Date class
+	- myTasks is by default null
+	- Added import statements
+	- Compiled for the first time!
+	- Fixed a lot of bugs
+	- Removed the Calendar and Month .java files
+	- 
