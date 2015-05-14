@@ -66,4 +66,5 @@ name:51415v0015nightly.zip
 	- Fixed a lot of bugs
 	- Removed the Calendar and Month .java files
 		- May add them back in, but need major restructuring
-	- 
+	- added nightly
+	- added milestone
