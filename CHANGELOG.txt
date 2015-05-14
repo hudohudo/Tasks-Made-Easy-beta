@@ -65,4 +65,5 @@ name:51415v0015nightly.zip
 	- Compiled for the first time!
 	- Fixed a lot of bugs
 	- Removed the Calendar and Month .java files
+		- May add them back in, but need major restructuring
 	- 
