@@ -33,7 +33,7 @@ public class Task{
 		return taskDetails;
 	}
 
-	public Date setTaskDate(){
+	public Date getTaskDate(){
 		return taskDate;
 	}
 
