@@ -68,3 +68,11 @@ name:51415v0015nightly.zip
 		- May add them back in, but need major restructuring
 	- added nightly
 	- added milestone
+
+5/14/2015
+Hudson Havenhill
+v0.0.1.5.1 pre-alpha build 2 nightly
+name:51415v00151nightly.zip
+	- Worked on getting TaskRunner working
+	- bug fixes with the priority class/workings
+	- success with TaskRunner!

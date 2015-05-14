@@ -14,6 +14,7 @@ public class TasksMadeEasy {
 	}
 
 	public ArrayList<Task> sortByPriority(){
+	    if(myTasks.size() == 0) return myTasks;
 		for(int ind = 1;ind<myTasks.size();ind++){
 			if(myTasks.get(ind - 1).getPriority() > myTasks.get(ind).getPriority()){
 				Task tempTask = myTasks.get(ind);
