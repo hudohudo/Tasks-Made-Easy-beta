@@ -15,7 +15,7 @@ public class Month(){
 		return name;
 	}
 
-	public void addNewTask(int day, Task t){
-		
+	public void addNewTask(int day, String n, Date d){
+		days.set(day-1, new Task(n, d));
 	}
 }

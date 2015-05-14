@@ -42,3 +42,13 @@ name:51315v0013nightly.zip
 	- Added Month.java
 		- Contains name, and all the days
 		- Contains arrayList for days
+
+5/13/2015
+Hudson Havenhill
+v0.0.1.4 pre-alpha build 2 nightly
+name:51315v0014nightly.zip
+	- Added more to Month and Event classes
+	- Restructured Months and days in ArrayList
+	- days is now a ArrayList<Task>
+	- Started building the Resources.java class
+		- Contains information for the GUI using get methods

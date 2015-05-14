@@ -7,6 +7,9 @@ public class Event extends Task
 	{
 			super(nameOfEvent, dateOfEvent);
 			dateToNotify = new Date(m, d, y);
+	}
 
+	public Date getDateToNotify(){
+		return dateToNotify;
 	}
 }
