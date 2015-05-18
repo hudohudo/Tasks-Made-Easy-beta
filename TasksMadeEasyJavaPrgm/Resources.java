@@ -6,6 +6,6 @@ public class Resources{
 	public static final String SUCCESSMESSAGE = "Task created!";
 	public static final String TASKREMINDER = "You have a task today!";
 	public static final String EVENTREMINDER = "You have an event today!";
-	public static final String WEATHER = "The weather today is: ";
+	
 	
 }
