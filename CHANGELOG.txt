@@ -37,13 +37,11 @@ name:51315v0013nightly.zip
 	- Created a class called Event that extends Task
 		- includes instance variable dateToNotify that is a Date obj
 		- adds a new method getDateToNotify that returns dateToNotify
-<<<<<<< Updated upstream
 	- Added Calendar.java
 		- Creates a year in an arrayList of Months
 	- Added Month.java
 		- Contains name, and all the days
 		- Contains arrayList for days
-<<<<<<< Updated upstream
 
 5/13/2015
 Hudson Havenhill
@@ -78,8 +76,4 @@ name:51415v00151nightly.zip
 	- Worked on getting TaskRunner working
 	- bug fixes with the priority class/workings
 	- success with TaskRunner!
-=======
-=======
-	- Added constructor for Event
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
