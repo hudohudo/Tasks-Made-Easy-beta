@@ -24,7 +24,7 @@ Hudson Havenhill
 v0.0.1.2 pre-alpha build 3 nightly
 name:51215v0012nightly.zip
 	- Made TasksMadeEasy.java not abstract
-	- Declared myTasks in TasksMadeEasy contructor
+	- Declared myTasks in TasksMadeEasy constructor
 	- deleted addTask method
 	- added a sortByPriority method to TasksMadeEasy that sorts based on int priority
 		- doesn't switch Tasks with the same priority level
