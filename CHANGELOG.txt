@@ -83,3 +83,6 @@ v0.0.1.6 pre-alpha build 1 nightly
 name:51815v0016nightly.zip
 	- Creating GUI
 	- 
+
+50,109,255 blue
+217,217,217 gray
