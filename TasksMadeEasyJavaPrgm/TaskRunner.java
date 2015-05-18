@@ -30,8 +30,9 @@ public class TaskRunner{
 			}
 		}
 		
-		mainTasks.myTasks.sortByPriority;
+		
 		mainTasks.sortByPriority();
+		System.out.print(mainTasks);
 		System.out.println("Success!");
 	}
 }

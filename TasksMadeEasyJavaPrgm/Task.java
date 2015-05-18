@@ -3,7 +3,7 @@ public class Task{
 	private String taskName;	
 	private String taskDetails;
 	private Date taskDate;
-	private int priority;
+
 
 	public Task(String nameOfTask, Date dateOfTask){
 		taskName = nameOfTask;
@@ -22,9 +22,7 @@ public class Task{
 		taskDate = d;
 	}
 
-	public void setPriority(int val){
-		priority = val;
-	}
+
 
 	public String getTaskName(){
 		return taskName;
@@ -38,8 +36,6 @@ public class Task{
 		return taskDate;
 	}
 
-	public int getPriority(){
-		return priority;
-	}
+
 
 }
