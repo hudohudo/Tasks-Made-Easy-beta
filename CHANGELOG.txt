@@ -77,3 +77,9 @@ name:51415v00151nightly.zip
 	- bug fixes with the priority class/workings
 	- success with TaskRunner!
 
+5/18/2015
+Hudson Havenhill and Eric Qian
+v0.0.1.6 pre-alpha build 1 nightly
+name:51815v0016nightly.zip
+	- Creating GUI
+	- 
