@@ -82,6 +82,8 @@ Hudson Havenhill and Eric Qian
 v0.0.1.6 pre-alpha build 1 nightly
 name:51815v0016nightly.zip
 	- Creating GUI
+	- Edited the runner to accept valid dates only
+	- Got rid of priority in Tasks
 
 5/19/2015
 Hudson Havenhill and Eric Qian
