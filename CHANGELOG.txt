@@ -82,7 +82,11 @@ Hudson Havenhill and Eric Qian
 v0.0.1.6 pre-alpha build 1 nightly
 name:51815v0016nightly.zip
 	- Creating GUI
-	- 
 
-50,109,255 blue
-217,217,217 gray
+5/19/2015
+Hudson Havenhill and Eric Qian
+v0.0.1.7 pre-alpha build 1 nightly
+name:v0017nightly.zip
+	- Bug fixes
+	- Added more to the GUI
+	- New classes for Event
