@@ -1,9 +1,11 @@
 public class Anniversary extends Event
 {
 	private List<Gifts> gifts = new Arraylist<Gifts>;
-	public Anniversary (String nameOfEvent, Date dateOfEvent, int m, int d, int y)
+	private people;
+	public Anniversary (String nameOfEvent, Date dateOfEvent, int m, int d, int y, int att)
 	{
 		super(nameOfEvent, dateOfEvent, m, d, y);
+		people = att;
 	}
 
 
@@ -15,5 +17,9 @@ public class Anniversary extends Event
 	public getDate()
 	{
 		super.getDateToNotify();
+	}
+	public int getAttendees()
+	{
+		return people;
 	}
 }

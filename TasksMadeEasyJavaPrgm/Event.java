@@ -10,7 +10,8 @@ public class Event extends Task
 			dateToNotify = new Date(y, m, d);
 	}
 
-	public Date getDateToNotify(){
+	public Date getDateToNotify()
+	{
 		return dateToNotify;
 	}
 }
