@@ -1,6 +1,3 @@
-/**
-*Text genereted by Simple GUI Extension for BlueJ
-*/
 import javax.swing.UIManager.LookAndFeelInfo;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,12 +14,16 @@ import javax.swing.*;
 
 public class GUI_project extends JFrame {
     
-    private String[] listOfEventsArr = {"Reminder",
+    private String[] listOfEventsArr = {"Std. Event",
+                                        "Reminder",
                                         "Birthday",
                                         "Anniversary",
-                                        "Standard Event",
                                         "Chore"};
     private JComboBox listOfEvents;
+    private JLabel headForListOfEvents;
+    private JLabel header;
+    private JLabel nameYourTaskHeader;
+    private JTextFile nameYourTask;
     
     //50,109,255 - blue
     //217,217,217 - gray
@@ -38,9 +39,49 @@ public class GUI_project extends JFrame {
         contentPane.setPreferredSize(new Dimension(500,500));
         contentPane.setBackground(new Color(50,109,255));
         
+        //New listOfEvents comboBox
         listOfEvents = new JComboBox(listOfEventsArr);
-        listOfEvents.setSelectedIndex(3);
+        listOfEvents.setSelectedIndex(0);
+        listOfEvents.setBounds(5,100,120,35);
+        listOfEvents.setEnabled(true);
+        listOfEvents.setFont(new Font("Arial",0,12));
+        listOfEvents.setVisible(true);
+        contentPane.add(listOfEvents);
         
+        headForListOfEvents = new JLabel();
+		headForListOfEvents.setBounds(5,65,140,35);
+		headForListOfEvents.setBackground(new Color(50,109,255));
+		headForListOfEvents.setForeground(new Color(0,0,0));
+		headForListOfEvents.setEnabled(true);
+		headForListOfEvents.setFont(new Font("Arial",0,12));
+		headForListOfEvents.setText("Select Your Task");
+		headForListOfEvents.setVisible(true);
+		contentPane.add(headForListOfEvents);
+        
+        //Header label
+        header = new JLabel();
+		header.setBounds(180,10,140,35);
+		header.setBackground(new Color(50,109,255));
+		header.setForeground(new Color(0,0,0));
+		header.setEnabled(true);
+		header.setFont(new Font("Arial",0,18));
+		header.setText("TasksMadeEasy");
+		header.setVisible(true);
+		contentPane.add(header);
+		
+		//Name Your task
+		nameYourtask = new JTextField(20);
+		contentPane.add(nameYourTask);
+		
+		nameYourTaskHeader = new JLabel();
+		nameYourTaskHeader.setBounds(5,155,140,35);
+		nameYourTaskHeader.setBackground(new Color(50,109,255));
+		nameYourTaskHeader.setForeground(new Color(0,0,0));
+		nameYourTaskHeader.setEnabled(true);
+		nameYourTaskHeader.setFont(new Font("Arial",0,12));
+		nameYourTaskHeader.setText("Name Your Task");
+		nameYourTaskHeader.setVisible(true);
+		contentPane.add(nameYourTaskHeader);
 
         //adding panel to JFrame and seting of window position and close operation
         this.add(contentPane);
@@ -50,15 +91,7 @@ public class GUI_project extends JFrame {
         this.setVisible(true);
     }
 
-    //method for generate menu
-    //public void generateMenu(){
-        //menuBar = new JMenuBar();
-    //}
-
-
-
      public static void main(String[] args){
-        //System.setProperty("swing.defaultlaf", "com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 new GUI_project();
