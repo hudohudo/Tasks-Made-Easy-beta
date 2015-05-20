@@ -96,3 +96,9 @@ name:v0017nightly.zip
 	- Added Birthday class
 	- Added Anniversary class
 	- Added Gift class
+
+5/20/2015
+Hudson Havenhill and Eric Qian
+v0.0.1.8 pre-alpha build 1 nightly
+name:v0018nightly.zip
+	- Completed the task classes
