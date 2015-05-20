@@ -83,6 +83,7 @@ v0.0.1.6 pre-alpha build 1 nightly
 name:51815v0016nightly.zip
 	- Creating GUI
 	- Edited the runner to accept valid dates only
+	- Runner should now be a tester too, and should be more flexible 
 	- Got rid of priority in Tasks
 
 5/19/2015
@@ -92,3 +93,6 @@ name:v0017nightly.zip
 	- Bug fixes
 	- Added more to the GUI
 	- New classes for Event
+	- Added Birthday class
+	- Added Anniversary class
+	- Added Gift class

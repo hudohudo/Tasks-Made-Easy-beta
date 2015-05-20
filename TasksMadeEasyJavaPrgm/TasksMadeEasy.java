@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 public class TasksMadeEasy 
 {
 	
@@ -18,7 +19,7 @@ public class TasksMadeEasy
 
 	public void sortByPriority()
 	{
-	    if(myTasks.size() == 0) return myTasks;
+	    if(myTasks.size() == 0) return;
 		{
 			Collections.sort(myTasks);
 		}

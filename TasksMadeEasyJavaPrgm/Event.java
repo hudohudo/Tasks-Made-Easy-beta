@@ -1,17 +1,12 @@
 import java.util.Date;
 public class Event extends Task
 {
-
-	private Date dateToNotify;
-
-	public Event(String nameOfEvent, Date dateOfEvent, int m, int d, int y)
+	public Event(String nameOfTask, int m, int d, int y, int m1, int d1, int y1)
 	{
-			super(nameOfEvent, dateOfEvent);
-			dateToNotify = new Date(y, m, d);
+			super(nameOfTask, m, d, y, m1, d1, y1);
 	}
-
-	public Date getDateToNotify()
+	public Date getDate()
 	{
-		return dateToNotify;
+		return super.getTaskDate();
 	}
 }

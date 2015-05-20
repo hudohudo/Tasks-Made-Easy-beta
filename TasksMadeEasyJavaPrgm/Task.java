@@ -1,40 +1,40 @@
 import java.util.Date;
-public class Task{
-	private String taskName;	
-	private String taskDetails;
-	private Date taskDate;
+public abstract class Task
+{
+    private String taskName;    
+    private Date taskDate;
+    private Date  previous;
+
+    public Task(String nameOfTask, int m, int d, int y, int m1, int d1, int y1)
+    {
+        taskName = nameOfTask;
+        taskDate = new Date(y, m, d);
+        previous = new Date(y1, m1, d1);
+    }
+
+    public void setTaskName(String val)
+    {
+        taskName = val;
+    }
 
 
-	public Task(String nameOfTask, Date dateOfTask){
-		taskName = nameOfTask;
-		taskDate = dateOfTask;
-	}
-
-	public void setTaskName(String val){
-		taskName = val;
-	}
-
-	public void setTaskDetails(String str){
-		taskDetails = str;
-	}
-
-	public void setDate(Date d){
-		taskDate = d;
-	}
+    public void setDate(int m, int d, int y)
+    {
+        taskDate = new Date(y, m, d);
+    }
 
 
 
-	public String getTaskName(){
-		return taskName;
-	}
+    public String getTaskName()
+    {
+        return taskName;
+    }
 
-	public String getTaskDetails(){
-		return taskDetails;
-	}
 
-	public Date getTaskDate(){
-		return taskDate;
-	}
+    public Date getTaskDate()
+    {
+        return taskDate;
+    }
 
 
 

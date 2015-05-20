@@ -1,15 +1,15 @@
-
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Date;
 public class Anniversary extends Event
 {
-	private List<Gifts> gifts = new Arraylist<Gifts>();
+	private List<Gift> gifts = new ArrayList<Gift>();
 	private int people;
-	public Anniversary (String nameOfEvent, Date dateOfEvent, int m, int d, int y, int att)
+	public Anniversary (String nameOfTask, int m, int d, int y, int m1, int d1, int y1, int att)
 	{
-		super(nameOfEvent, dateOfEvent, m, d, y);
+		super(nameOfTask, m, d, y, m1, d1, y1);
 		people = att;
 	}
-
-
 	public void addGift (String name, double cost)
 	{
 		Gift thing = new Gift(name, cost);
@@ -17,7 +17,7 @@ public class Anniversary extends Event
 	}
 	public Date getDate()
 	{
-		super.getDateToNotify();
+		return super.getDate();
 	}
 	public int getAttendees()
 	{
