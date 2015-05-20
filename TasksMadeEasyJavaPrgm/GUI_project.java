@@ -23,7 +23,7 @@ public class GUI_project extends JFrame {
     private JLabel headForListOfEvents;
     private JLabel header;
     private JLabel nameYourTaskHeader;
-    private JTextFile nameYourTask;
+    private JTextField nameYourTask;
     
     //50,109,255 - blue
     //217,217,217 - gray
@@ -70,7 +70,11 @@ public class GUI_project extends JFrame {
 		contentPane.add(header);
 		
 		//Name Your task
-		nameYourtask = new JTextField(20);
+		nameYourTask = new JTextField(20);
+		nameYourTask.setBounds(5,175,140,35);
+		nameYourTask.setEnabled(true);
+		nameYourTask.setFont(new Font("Arial",0,12));
+		nameYourTask.setVisible(true);
 		contentPane.add(nameYourTask);
 		
 		nameYourTaskHeader = new JLabel();
