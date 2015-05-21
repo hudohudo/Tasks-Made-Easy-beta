@@ -18,6 +18,22 @@ public class GUI_project extends JFrame
     private JLabel header;
     private JLabel nameYourTaskHeader;
     private JTextField nameYourTask;
+    private JLabel dateToNotifyHeader;
+    private JLabel DTNMonth;
+    private JLabel DTNDay;
+    private JLabel DTNYear;
+    private JTextField DTNMonthText;
+    private JTextField DTNDayText;
+    private JTextField DTNYearText;
+    private JLabel dateOfEventHeader;
+    private JLabel DOfMonth;
+    private JLabel DOfDay;
+    private JLabel DOfYear;
+    private JTextField DOfMonthText;
+    private JTextField DOfDayText;
+    private JTextField DOfYearText;
+    private JButton createTask;
+
     
     //50,109,255 - blue
     //217,217,217 - gray
@@ -25,7 +41,6 @@ public class GUI_project extends JFrame
     //Constructor 
     public GUI_project()
     {
-
         this.setTitle("Task Manager pre-alpha");
         this.setSize(500,500);
 
@@ -66,7 +81,7 @@ public class GUI_project extends JFrame
         
         //Name Your task
         nameYourTask = new JTextField(20);
-        nameYourTask.setBounds(5,175,140,35);
+        nameYourTask.setBounds(5,180,140,35);
         nameYourTask.setEnabled(true);
         nameYourTask.setFont(new Font("Arial",0,12));
         nameYourTask.setVisible(true);
@@ -81,6 +96,100 @@ public class GUI_project extends JFrame
         nameYourTaskHeader.setText("Name Your Task");
         nameYourTaskHeader.setVisible(true);
         contentPane.add(nameYourTaskHeader);
+        
+        //Date to Notify
+        dateToNotifyHeader = new JLabel();
+        dateToNotifyHeader.setBounds(5,220,140,35);
+        dateToNotifyHeader.setBackground(new Color(50,109,255));
+        dateToNotifyHeader.setForeground(new Color(0,0,0));
+        dateToNotifyHeader.setEnabled(true);
+        dateToNotifyHeader.setFont(new Font("Arial",0,12));
+        dateToNotifyHeader.setText("Date to Notify");
+        dateToNotifyHeader.setVisible(true);
+        contentPane.add(dateToNotifyHeader);
+        
+        DTNMonth = new JLabel();
+        DTNMonth.setBounds(5,232,140,35);
+        DTNMonth.setBackground(new Color(50,109,255));
+        DTNMonth.setForeground(new Color(0,0,0));
+        DTNMonth.setEnabled(true);
+        DTNMonth.setFont(new Font("Arial",0,9));
+        DTNMonth.setText("Month     Day     Year");
+        DTNMonth.setVisible(true);
+        contentPane.add(DTNMonth);
+        
+        DTNMonthText = new JTextField(2);
+        DTNMonthText.setBounds(5,250,30,28);
+        DTNMonthText.setEnabled(true);
+        DTNMonthText.setFont(new Font("Arial",0,10));
+        DTNMonthText.setVisible(true);
+        contentPane.add(DTNMonthText);
+        
+        DTNDayText = new JTextField(2);
+        DTNDayText.setBounds(40,250,30,28);
+        DTNDayText.setEnabled(true);
+        DTNDayText.setFont(new Font("Arial",0,10));
+        DTNDayText.setVisible(true);
+        contentPane.add(DTNDayText);
+        
+        DTNYearText = new JTextField(4);
+        DTNYearText.setBounds(75,250,40,28);
+        DTNYearText.setEnabled(true);
+        DTNYearText.setFont(new Font("Arial",0,10));
+        contentPane.add(DTNYearText);
+        
+        //Date of Event
+        dateOfEventHeader = new JLabel();
+        dateOfEventHeader.setBounds(5,285,140,35);
+        dateOfEventHeader.setBackground(new Color(50,109,255));
+        dateOfEventHeader.setForeground(new Color(0,0,0));
+        dateOfEventHeader.setEnabled(true);
+        dateOfEventHeader.setFont(new Font("Arial",0,12));
+        dateOfEventHeader.setText("Date of Event");
+        dateOfEventHeader.setVisible(true);
+        contentPane.add(dateOfEventHeader);
+        
+        DOfMonth = new JLabel();
+        DOfMonth.setBounds(5,297,140,35);
+        DOfMonth.setBackground(new Color(50,109,255));
+        DOfMonth.setForeground(new Color(0,0,0));
+        DOfMonth.setEnabled(true);
+        DOfMonth.setFont(new Font("Arial",0,9));
+        DOfMonth.setText("Month     Day     Year");
+        DOfMonth.setVisible(true);
+        contentPane.add(DOfMonth);
+        
+        DOfMonthText = new JTextField(2);
+        DOfMonthText.setBounds(5,315,30,28);
+        DOfMonthText.setEnabled(true);
+        DOfMonthText.setFont(new Font("Arial",0,10));
+        DOfMonthText.setVisible(true);
+        contentPane.add(DOfMonthText);
+        
+        DOfDayText = new JTextField(2);
+        DOfDayText.setBounds(40,315,30,28);
+        DOfDayText.setEnabled(true);
+        DOfDayText.setFont(new Font("Arial",0,10));
+        DOfDayText.setVisible(true);
+        contentPane.add(DOfDayText);
+        
+        DOfYearText = new JTextField(4);
+        DOfYearText.setBounds(75,315,40,28);
+        DOfYearText.setEnabled(true);
+        DOfYearText.setFont(new Font("Arial",0,10));
+        contentPane.add(DOfYearText);
+        
+        //Create Button
+        createTask = new JButton();
+        createTask.setBounds(5,400,140,35);
+        createTask.setBackground(new Color(50,109,255));
+        createTask.setForeground(new Color(0,0,0));
+        createTask.setEnabled(true);
+        createTask.setFont(new Font("Arial",0,12));
+        createTask.setText("Create");
+        createTask.setVisible(true);
+        contentPane.add(createTask);
+        
 
         //adding panel to JFrame and seting of window position and close operation
         this.add(contentPane);
@@ -88,6 +197,8 @@ public class GUI_project extends JFrame
         this.setLocationRelativeTo(null);
         this.pack();
         this.setVisible(true);
+
+        
     }
 
     private class TaskListener implements MouseListener
