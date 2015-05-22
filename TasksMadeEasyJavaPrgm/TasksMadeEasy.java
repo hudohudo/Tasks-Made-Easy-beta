@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
-public class TasksMadeEasy 
+public class TasksMadeEasy
 {
 	
 	//This will not stay public, just need it for testing purposes
@@ -17,14 +17,14 @@ public class TasksMadeEasy
 		return myTasks;
 	}
 
-	public void sortByPriority()
-	{
-	    if(myTasks.size() == 0) return;
-		{
-			Collections.sort(myTasks);
-		}
-		return myTasks;
-	}
+// 	public void sortByPriority()
+// 	{
+// 	    if(myTasks.size() == 0) return;
+// 		{
+// 			Collections.sort(myTasks);
+// 		}
+// 		return myTasks;
+// 	}
 	
 	public void addNewTask(Task t)
 	{

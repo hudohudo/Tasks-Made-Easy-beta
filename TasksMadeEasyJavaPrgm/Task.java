@@ -1,5 +1,5 @@
 import java.util.Date;
-public abstract class Task
+public class Task
 {
     private String taskName;    
     private Date taskDate;

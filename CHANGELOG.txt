@@ -288,3 +288,19 @@ private String[] listOfEventsArr = {"Std. Event",
         this.setLocationRelativeTo(null);
         this.pack();
         this.setVisible(true);
+
+
+private JLabel sidePanelHeader;
+
+g.setColor(new Color(217,217,217));
+g.drawRect(300, 0, 200, 500);
+
+sidePanelHeader = new JLabel();
+sidePanelHeader.setBounds(300,15,140,35);
+sidePanelHeader.setBackground(new Color(50,109,255));
+sidePanelHeader.setForeground(new Color(0,0,0));
+sidePanelHeader.setEnabled(true);
+sidePanelHeader.setText(“Upcoming Tasks”);
+sidePanelHeader.setVisible(true);
+
+contentPane.add(sidePanelHeader);
