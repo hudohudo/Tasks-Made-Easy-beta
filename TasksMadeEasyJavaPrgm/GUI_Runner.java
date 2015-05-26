@@ -5,7 +5,6 @@ public class GUI_Runner
     {
         JFrame runner = new JFrame ("TasksMadeEasy BETA FTW");
         runner.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-        
         runner.getContentPane().add(new GUI_project());
         runner.pack();
         runner.setVisible(true);

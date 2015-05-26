@@ -24,6 +24,8 @@ public class GUI_project extends JPanel
     private JTextField DOfDayText;
     private JTextField DOfYearText;
     private JButton createTask;
+    private JTextField TaskDescribe;
+    private JLabel TaskDescribeHeader;
     
     private Task createdTask;
 
@@ -50,16 +52,34 @@ public class GUI_project extends JPanel
         header.setVisible(true);
         add(header);
 
+        //Describe the Task
+        TaskDescribeHeader = new JLabel();
+        TaskDescribeHeader.setBounds(5,132,140,35);
+        TaskDescribeHeader.setBackground(new Color(50,109,255));
+        TaskDescribeHeader.setForeground(new Color(0,0,0));
+        TaskDescribeHeader.setEnabled(true);
+        TaskDescribeHeader.setFont(new Font("Arial",0,12));
+        TaskDescribeHeader.setText("Description of Task");
+        TaskDescribeHeader.setVisible(true);
+        add(TaskDescribeHeader);
+        
+        TaskDescribe = new JTextField(20);
+        TaskDescribe.setBounds(5,155,140,35);
+        TaskDescribe.setEnabled(true);
+        TaskDescribe.setFont(new Font("Arial",0,12));
+        TaskDescribe.setVisible(true);
+        add(TaskDescribe);
+        
         //Name Your task
         nameYourTask = new JTextField(20);
-        nameYourTask.setBounds(5,180,140,35);
+        nameYourTask.setBounds(5,50,140,35);
         nameYourTask.setEnabled(true);
         nameYourTask.setFont(new Font("Arial",0,12));
         nameYourTask.setVisible(true);
         add(nameYourTask);
 
         nameYourTaskHeader = new JLabel();
-        nameYourTaskHeader.setBounds(5,155,140,35);
+        nameYourTaskHeader.setBounds(5,25,140,35);
         nameYourTaskHeader.setBackground(new Color(50,109,255));
         nameYourTaskHeader.setForeground(new Color(0,0,0));
         nameYourTaskHeader.setEnabled(true);
@@ -125,10 +145,11 @@ public class GUI_project extends JPanel
     private class CreateAction implements ActionListener{
         public void actionPerformed(ActionEvent e){
             System.out.println(nameYourTask.getText());
-//             createdTask = new Task(nameYourTask.getText(),
-//                                    Integer.parseInt(DOfMonthText.getText()),
-//                                    Integer.parseInt(DOfDayText.getText()),
-//                                    Integer.parseInt(DOfYearText.getText()));
+             createdTask = new Task(nameYourTask.getText(),
+                                    Integer.parseInt(DOfMonthText.getText()),
+                                    Integer.parseInt(DOfDayText.getText()),
+                                    Integer.parseInt(DOfYearText.getText()),
+                                    TaskDescribe.getText());
                                    
         }
     }
