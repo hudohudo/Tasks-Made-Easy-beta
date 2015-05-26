@@ -3,7 +3,7 @@ public class Task
 {
     private String taskName;    
     private Date taskDate;
-    private Date  remind;
+    private Date  remindDate;
     private String taskDescription;
 
     public Task(String nameOfTask, int m, int d, int y, int m1, int d1, int y1, String description)
@@ -11,10 +11,10 @@ public class Task
         taskName = nameOfTask;
         taskDescription = description;
         taskDate = new Date(y, m, d);
-        remind = new Date(y1, m1, d1);
+        remindDate = new Date(y1, m1, d1);
     }
 
-    public void setTaskName(String val)
+    public void setName(String val)
     {
         taskName = val;
     }
@@ -29,18 +29,28 @@ public class Task
         taskDate = new Date(y, m, d);
     }
 
-
-    public String getTaskName()
+    public String getTaskDate()
     {
-        return taskName;
+        return taskDate.toString();
     }
 
-
-    public Date getTaskDate()
+    public void setReminder(int m, int d, int y)
     {
-        return taskDate;
+        remindDate = new Date(y, m, d);
     }
 
+    public String getReminder()
+    {
+        return remindDate.toString();
+    }
 
-
+    public void setDescription(String desp)
+    {
+        taskDescription = desp;
+    }
+    
+    public String getDescription()
+    {
+        return taskDescription;
+    }
 }
