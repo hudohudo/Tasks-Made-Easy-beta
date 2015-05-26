@@ -18,13 +18,7 @@ public class GUI_project extends JPanel
     private JLabel header;
     private JLabel nameYourTaskHeader;
     private JTextField nameYourTask;
-    private JLabel dateToNotifyHeader;
-    private JLabel DTNMonth;
-    private JLabel DTNDay;
-    private JLabel DTNYear;
-    private JTextField DTNMonthText;
-    private JTextField DTNDayText;
-    private JTextField DTNYearText;
+    
     private JLabel dateOfEventHeader;
     private JLabel DOfMonth;
     private JLabel DOfDay;
@@ -33,6 +27,8 @@ public class GUI_project extends JPanel
     private JTextField DOfDayText;
     private JTextField DOfYearText;
     private JButton createTask;
+    
+    private Task createdTask;
 
     //50,109,255 - blue
     //217,217,217 - gray
@@ -93,47 +89,6 @@ public class GUI_project extends JPanel
         nameYourTaskHeader.setVisible(true);
         add(nameYourTaskHeader);
 
-        //Date to Notify
-        dateToNotifyHeader = new JLabel();
-        dateToNotifyHeader.setBounds(5,220,140,35);
-        dateToNotifyHeader.setBackground(new Color(50,109,255));
-        dateToNotifyHeader.setForeground(new Color(0,0,0));
-        dateToNotifyHeader.setEnabled(true);
-        dateToNotifyHeader.setFont(new Font("Arial",0,12));
-        dateToNotifyHeader.setText("Date to Notify");
-        dateToNotifyHeader.setVisible(true);
-        add(dateToNotifyHeader);
-
-        DTNMonth = new JLabel();
-        DTNMonth.setBounds(5,232,140,35);
-        DTNMonth.setBackground(new Color(50,109,255));
-        DTNMonth.setForeground(new Color(0,0,0));
-        DTNMonth.setEnabled(true);
-        DTNMonth.setFont(new Font("Arial",0,9));
-        DTNMonth.setText("Month     Day     Year");
-        DTNMonth.setVisible(true);
-        add(DTNMonth);
-
-        DTNMonthText = new JTextField(2);
-        DTNMonthText.setBounds(5,250,30,28);
-        DTNMonthText.setEnabled(true);
-        DTNMonthText.setFont(new Font("Arial",0,10));
-        DTNMonthText.setVisible(true);
-        add(DTNMonthText);
-
-        DTNDayText = new JTextField(2);
-        DTNDayText.setBounds(40,250,30,28);
-        DTNDayText.setEnabled(true);
-        DTNDayText.setFont(new Font("Arial",0,10));
-        DTNDayText.setVisible(true);
-        add(DTNDayText);
-
-        DTNYearText = new JTextField(4);
-        DTNYearText.setBounds(75,250,40,28);
-        DTNYearText.setEnabled(true);
-        DTNYearText.setFont(new Font("Arial",0,10));
-        add(DTNYearText);
-
         //Date of Event
         dateOfEventHeader = new JLabel();
         dateOfEventHeader.setBounds(5,285,140,35);
@@ -187,17 +142,15 @@ public class GUI_project extends JPanel
         createTask.setVisible(true);
         add(createTask);
 
-        //adding panel to JFrame and seting of window position and close operation
-        //         this.add(contentPane);
-        //         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //         this.setLocationRelativeTo(null);
-        //         this.pack();
-        //         this.setVisible(true);
-
     }
     private class CreateAction implements ActionListener{
         public void actionPerformed(ActionEvent e){
             System.out.println(nameYourTask.getText());
+            createdTask = new Task(nameYourTask.getText(),
+                                   Integer.parseInt(DOfMonthText.getText()),
+                                   Integer.parseInt(DOfDayText.getText()),
+                                   Integer.parseInt(DOfYearText.getText()));
+                                   
         }
     }
 }
