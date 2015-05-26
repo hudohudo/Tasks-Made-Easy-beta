@@ -7,12 +7,12 @@ import java.util.*;
 
 public class GUI_project extends JPanel
 {
-    
+
     private String[] listOfEventsArr = {"Std. Event",
-                                        "Reminder",
-                                        "Birthday",
-                                        "Anniversary",
-                                        "Chore"};
+            "Reminder",
+            "Birthday",
+            "Anniversary",
+            "Chore"};
     private JComboBox listOfEvents;
     private JLabel headForListOfEvents;
     private JLabel header;
@@ -34,14 +34,12 @@ public class GUI_project extends JPanel
     private JTextField DOfYearText;
     private JButton createTask;
 
-    
     //50,109,255 - blue
     //217,217,217 - gray
 
     //Constructor 
     public GUI_project()
     {
-        
 
         //pane with null layout
         setBackground(new Color(50,109,255));
@@ -55,7 +53,7 @@ public class GUI_project extends JPanel
         listOfEvents.setFont(new Font("Arial",0,12));
         listOfEvents.setVisible(true);
         add(listOfEvents);
-        
+
         headForListOfEvents = new JLabel();
         headForListOfEvents.setBounds(5,65,140,35);
         headForListOfEvents.setBackground(new Color(50,109,255));
@@ -65,7 +63,7 @@ public class GUI_project extends JPanel
         headForListOfEvents.setText("Select Your Task");
         headForListOfEvents.setVisible(true);
         add(headForListOfEvents);
-        
+
         //Header label
         header = new JLabel();
         header.setBounds(180,10,140,35);
@@ -76,7 +74,7 @@ public class GUI_project extends JPanel
         header.setText("TasksMadeEasy");
         header.setVisible(true);
         add(header);
-        
+
         //Name Your task
         nameYourTask = new JTextField(20);
         nameYourTask.setBounds(5,180,140,35);
@@ -84,7 +82,7 @@ public class GUI_project extends JPanel
         nameYourTask.setFont(new Font("Arial",0,12));
         nameYourTask.setVisible(true);
         add(nameYourTask);
-        
+
         nameYourTaskHeader = new JLabel();
         nameYourTaskHeader.setBounds(5,155,140,35);
         nameYourTaskHeader.setBackground(new Color(50,109,255));
@@ -94,7 +92,7 @@ public class GUI_project extends JPanel
         nameYourTaskHeader.setText("Name Your Task");
         nameYourTaskHeader.setVisible(true);
         add(nameYourTaskHeader);
-        
+
         //Date to Notify
         dateToNotifyHeader = new JLabel();
         dateToNotifyHeader.setBounds(5,220,140,35);
@@ -105,7 +103,7 @@ public class GUI_project extends JPanel
         dateToNotifyHeader.setText("Date to Notify");
         dateToNotifyHeader.setVisible(true);
         add(dateToNotifyHeader);
-        
+
         DTNMonth = new JLabel();
         DTNMonth.setBounds(5,232,140,35);
         DTNMonth.setBackground(new Color(50,109,255));
@@ -115,27 +113,27 @@ public class GUI_project extends JPanel
         DTNMonth.setText("Month     Day     Year");
         DTNMonth.setVisible(true);
         add(DTNMonth);
-        
+
         DTNMonthText = new JTextField(2);
         DTNMonthText.setBounds(5,250,30,28);
         DTNMonthText.setEnabled(true);
         DTNMonthText.setFont(new Font("Arial",0,10));
         DTNMonthText.setVisible(true);
         add(DTNMonthText);
-        
+
         DTNDayText = new JTextField(2);
         DTNDayText.setBounds(40,250,30,28);
         DTNDayText.setEnabled(true);
         DTNDayText.setFont(new Font("Arial",0,10));
         DTNDayText.setVisible(true);
         add(DTNDayText);
-        
+
         DTNYearText = new JTextField(4);
         DTNYearText.setBounds(75,250,40,28);
         DTNYearText.setEnabled(true);
         DTNYearText.setFont(new Font("Arial",0,10));
         add(DTNYearText);
-        
+
         //Date of Event
         dateOfEventHeader = new JLabel();
         dateOfEventHeader.setBounds(5,285,140,35);
@@ -146,7 +144,7 @@ public class GUI_project extends JPanel
         dateOfEventHeader.setText("Date of Event");
         dateOfEventHeader.setVisible(true);
         add(dateOfEventHeader);
-        
+
         DOfMonth = new JLabel();
         DOfMonth.setBounds(5,297,140,35);
         DOfMonth.setBackground(new Color(50,109,255));
@@ -156,27 +154,27 @@ public class GUI_project extends JPanel
         DOfMonth.setText("Month     Day     Year");
         DOfMonth.setVisible(true);
         add(DOfMonth);
-        
+
         DOfMonthText = new JTextField(2);
         DOfMonthText.setBounds(5,315,30,28);
         DOfMonthText.setEnabled(true);
         DOfMonthText.setFont(new Font("Arial",0,10));
         DOfMonthText.setVisible(true);
         add(DOfMonthText);
-        
+
         DOfDayText = new JTextField(2);
         DOfDayText.setBounds(40,315,30,28);
         DOfDayText.setEnabled(true);
         DOfDayText.setFont(new Font("Arial",0,10));
         DOfDayText.setVisible(true);
         add(DOfDayText);
-        
+
         DOfYearText = new JTextField(4);
         DOfYearText.setBounds(75,315,40,28);
         DOfYearText.setEnabled(true);
         DOfYearText.setFont(new Font("Arial",0,10));
         add(DOfYearText);
-        
+
         //Create Button
         createTask = new JButton();
         createTask.addActionListener(new CreateAction());
@@ -188,16 +186,14 @@ public class GUI_project extends JPanel
         createTask.setText("Create");
         createTask.setVisible(true);
         add(createTask);
-        
 
         //adding panel to JFrame and seting of window position and close operation
-//         this.add(contentPane);
-//         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//         this.setLocationRelativeTo(null);
-//         this.pack();
-//         this.setVisible(true);
+        //         this.add(contentPane);
+        //         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //         this.setLocationRelativeTo(null);
+        //         this.pack();
+        //         this.setVisible(true);
 
-        
     }
     private class CreateAction implements ActionListener{
         public void actionPerformed(ActionEvent e){
