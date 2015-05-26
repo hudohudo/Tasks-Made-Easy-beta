@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=nameOfTask\ m\ d\ y\ m1\ d1\ y1\ description
-comment0.target=Task(java.lang.String,\ int,\ int,\ int,\ int,\ int,\ int,\ java.lang.String)
+comment0.params=nameOfTask\ m\ d\ y\ description
+comment0.target=Task(java.lang.String,\ int,\ int,\ int,\ java.lang.String)
 comment1.params=val
 comment1.target=void\ setName(java.lang.String)
 comment2.params=
@@ -9,12 +9,8 @@ comment3.params=m\ d\ y
 comment3.target=void\ setDate(int,\ int,\ int)
 comment4.params=
 comment4.target=java.lang.String\ getTaskDate()
-comment5.params=m\ d\ y
-comment5.target=void\ setReminder(int,\ int,\ int)
+comment5.params=desp
+comment5.target=void\ setDescription(java.lang.String)
 comment6.params=
-comment6.target=java.lang.String\ getReminder()
-comment7.params=desp
-comment7.target=void\ setDescription(java.lang.String)
-comment8.params=
-comment8.target=java.lang.String\ getDescription()
-numComments=9
+comment6.target=java.lang.String\ getDescription()
+numComments=7

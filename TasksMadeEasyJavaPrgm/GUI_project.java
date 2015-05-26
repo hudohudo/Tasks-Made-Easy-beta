@@ -13,12 +13,9 @@ public class GUI_project extends JPanel
             "Birthday",
             "Anniversary",
             "Chore"};
-    private JComboBox listOfEvents;
-    private JLabel headForListOfEvents;
     private JLabel header;
     private JLabel nameYourTaskHeader;
     private JTextField nameYourTask;
-    
     private JLabel dateOfEventHeader;
     private JLabel DOfMonth;
     private JLabel DOfDay;
@@ -41,25 +38,7 @@ public class GUI_project extends JPanel
         setBackground(new Color(50,109,255));
         setPreferredSize(new Dimension(500,500));
         setLayout(null);
-        //New listOfEvents comboBox
-        listOfEvents = new JComboBox(listOfEventsArr);
-        listOfEvents.setSelectedIndex(0);
-        listOfEvents.setBounds(5,100,120,35);
-        listOfEvents.setEnabled(true);
-        listOfEvents.setFont(new Font("Arial",0,12));
-        listOfEvents.setVisible(true);
-        add(listOfEvents);
-
-        headForListOfEvents = new JLabel();
-        headForListOfEvents.setBounds(5,65,140,35);
-        headForListOfEvents.setBackground(new Color(50,109,255));
-        headForListOfEvents.setForeground(new Color(0,0,0));
-        headForListOfEvents.setEnabled(true);
-        headForListOfEvents.setFont(new Font("Arial",0,12));
-        headForListOfEvents.setText("Select Your Task");
-        headForListOfEvents.setVisible(true);
-        add(headForListOfEvents);
-
+        
         //Header label
         header = new JLabel();
         header.setBounds(180,10,140,35);
@@ -146,10 +125,10 @@ public class GUI_project extends JPanel
     private class CreateAction implements ActionListener{
         public void actionPerformed(ActionEvent e){
             System.out.println(nameYourTask.getText());
-            createdTask = new Task(nameYourTask.getText(),
-                                   Integer.parseInt(DOfMonthText.getText()),
-                                   Integer.parseInt(DOfDayText.getText()),
-                                   Integer.parseInt(DOfYearText.getText()));
+//             createdTask = new Task(nameYourTask.getText(),
+//                                    Integer.parseInt(DOfMonthText.getText()),
+//                                    Integer.parseInt(DOfDayText.getText()),
+//                                    Integer.parseInt(DOfYearText.getText()));
                                    
         }
     }

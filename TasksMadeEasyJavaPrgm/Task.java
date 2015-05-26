@@ -3,15 +3,13 @@ public class Task
 {
     private String taskName;    
     private Date taskDate;
-    private Date  remindDate;
     private String taskDescription;
 
-    public Task(String nameOfTask, int m, int d, int y, int m1, int d1, int y1, String description)
+    public Task(String nameOfTask, int m, int d, int y, String description)
     {
         taskName = nameOfTask;
         taskDescription = description;
         taskDate = new Date(y, m, d);
-        remindDate = new Date(y1, m1, d1);
     }
 
     public void setName(String val)
@@ -32,16 +30,6 @@ public class Task
     public String getTaskDate()
     {
         return taskDate.toString();
-    }
-
-    public void setReminder(int m, int d, int y)
-    {
-        remindDate = new Date(y, m, d);
-    }
-
-    public String getReminder()
-    {
-        return remindDate.toString();
     }
 
     public void setDescription(String desp)
