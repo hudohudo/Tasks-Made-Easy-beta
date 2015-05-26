@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=giftname\ giftcost
-comment0.target=Gift(java.lang.String,\ double)
-comment1.params=
-comment1.target=double\ getCost()
-comment2.params=
-comment2.target=java.lang.String\ getName()
-numComments=3

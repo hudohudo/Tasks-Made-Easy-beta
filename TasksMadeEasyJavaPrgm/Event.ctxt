@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.params=nameOfTask\ m\ d\ y\ m1\ d1\ y1
-comment0.target=Event(java.lang.String,\ int,\ int,\ int,\ int,\ int,\ int)
-comment1.params=
-comment1.target=java.util.Date\ getDate()
-numComments=2
