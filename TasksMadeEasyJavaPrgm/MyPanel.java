@@ -12,6 +12,10 @@ import java.util.*;
  */
 public class MyPanel extends JPanel
 { 
+    public MyPanel()
+    {
+        setPreferredSize(new Dimension(200,200));
+    }
     public void paintComponent (Graphics g)
     {
        super.paintComponent(g);
