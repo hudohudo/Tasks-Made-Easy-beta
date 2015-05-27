@@ -143,14 +143,24 @@ public class GUI_project extends JPanel
 
     }
     private class CreateAction implements ActionListener{
+        ArrayList<Task> tasks = new ArrayList<Task>();
         public void actionPerformed(ActionEvent e){
             System.out.println(nameYourTask.getText());
-             createdTask = new Task(nameYourTask.getText(),
-                                    Integer.parseInt(DOfMonthText.getText()),
-                                    Integer.parseInt(DOfDayText.getText()),
-                                    Integer.parseInt(DOfYearText.getText()),
-                                    TaskDescribe.getText());
-                                   
+            String name = nameYourTask.getText();
+            int month = Integer.parseInt(DOfMonthText.getText());
+            int day = Integer.parseInt(DOfDayText.getText());
+            int year = Integer.parseInt(DOfYearText.getText());
+            String description = TaskDescribe.getText();
+            if(((month==1||month==3||month==5||month==6||month==7||month==8||month==10||month==12)&&day>31)||((month==4||month==6||month==9||month==11)&&day>30)||(month==2&&day>28&&year%4!=0)||(month==2&&day>29&&year%4==0))
+                {
+                    System.out.println("Not a valid date");
+                }
+                else
+                {
+                    tasks.add(new Task(name, month, day, year, description));
+                }
+            Collections.sort(tasks);
+            
         }
     }
 }
