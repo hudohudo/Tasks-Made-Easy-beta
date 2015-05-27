@@ -37,24 +37,24 @@ public class GUI_project extends JPanel
     {
 
         //pane with null layout
-        setBackground(new Color(50,109,255));
-        setPreferredSize(new Dimension(500,500));
+        setBackground(new Color(29,152,136));
+        setPreferredSize(new Dimension(300,500));
         setLayout(null);
         
         //Header label
         header = new JLabel();
-        header.setBounds(180,10,140,35);
+        header.setBounds(25,20,180,35);
         header.setBackground(new Color(50,109,255));
         header.setForeground(new Color(0,0,0));
         header.setEnabled(true);
-        header.setFont(new Font("Arial",0,18));
+        header.setFont(new Font("Arial",0,22));
         header.setText("TasksMadeEasy");
         header.setVisible(true);
         add(header);
 
         //Describe the Task
         TaskDescribeHeader = new JLabel();
-        TaskDescribeHeader.setBounds(5,132,140,35);
+        TaskDescribeHeader.setBounds(25,145,140,35);
         TaskDescribeHeader.setBackground(new Color(50,109,255));
         TaskDescribeHeader.setForeground(new Color(0,0,0));
         TaskDescribeHeader.setEnabled(true);
@@ -64,7 +64,7 @@ public class GUI_project extends JPanel
         add(TaskDescribeHeader);
         
         TaskDescribe = new JTextField(20);
-        TaskDescribe.setBounds(5,155,140,35);
+        TaskDescribe.setBounds(25,165,140,35);
         TaskDescribe.setEnabled(true);
         TaskDescribe.setFont(new Font("Arial",0,12));
         TaskDescribe.setVisible(true);
@@ -72,14 +72,14 @@ public class GUI_project extends JPanel
         
         //Name Your task
         nameYourTask = new JTextField(20);
-        nameYourTask.setBounds(5,50,140,35);
+        nameYourTask.setBounds(25,90,140,35);
         nameYourTask.setEnabled(true);
         nameYourTask.setFont(new Font("Arial",0,12));
         nameYourTask.setVisible(true);
         add(nameYourTask);
 
         nameYourTaskHeader = new JLabel();
-        nameYourTaskHeader.setBounds(5,25,140,35);
+        nameYourTaskHeader.setBounds(25,70,140,35);
         nameYourTaskHeader.setBackground(new Color(50,109,255));
         nameYourTaskHeader.setForeground(new Color(0,0,0));
         nameYourTaskHeader.setEnabled(true);
@@ -90,7 +90,7 @@ public class GUI_project extends JPanel
 
         //Date of Event
         dateOfEventHeader = new JLabel();
-        dateOfEventHeader.setBounds(5,285,140,35);
+        dateOfEventHeader.setBounds(25,220,140,35);
         dateOfEventHeader.setBackground(new Color(50,109,255));
         dateOfEventHeader.setForeground(new Color(0,0,0));
         dateOfEventHeader.setEnabled(true);
@@ -100,7 +100,7 @@ public class GUI_project extends JPanel
         add(dateOfEventHeader);
 
         DOfMonth = new JLabel();
-        DOfMonth.setBounds(5,297,140,35);
+        DOfMonth.setBounds(25,230,140,35);
         DOfMonth.setBackground(new Color(50,109,255));
         DOfMonth.setForeground(new Color(0,0,0));
         DOfMonth.setEnabled(true);
@@ -110,21 +110,21 @@ public class GUI_project extends JPanel
         add(DOfMonth);
 
         DOfMonthText = new JTextField(2);
-        DOfMonthText.setBounds(5,315,30,28);
+        DOfMonthText.setBounds(25,240,30,28);
         DOfMonthText.setEnabled(true);
         DOfMonthText.setFont(new Font("Arial",0,10));
         DOfMonthText.setVisible(true);
         add(DOfMonthText);
 
         DOfDayText = new JTextField(2);
-        DOfDayText.setBounds(40,315,30,28);
+        DOfDayText.setBounds(40,240,30,28);
         DOfDayText.setEnabled(true);
         DOfDayText.setFont(new Font("Arial",0,10));
         DOfDayText.setVisible(true);
         add(DOfDayText);
 
         DOfYearText = new JTextField(4);
-        DOfYearText.setBounds(75,315,40,28);
+        DOfYearText.setBounds(75,240,40,28);
         DOfYearText.setEnabled(true);
         DOfYearText.setFont(new Font("Arial",0,10));
         add(DOfYearText);

@@ -14,14 +14,14 @@ public class MyPanel extends JPanel
 { 
     public MyPanel()
     {
-        setPreferredSize(new Dimension(200,200));
+        setPreferredSize(new Dimension(320,500));
     }
     public void paintComponent (Graphics g)
     {
        super.paintComponent(g);
        
        g.setColor(new Color(140,140,140));
-       g.fillRect(180,20,320,480);
+       g.fillRect(0,0,320,500);
 
     }
 }
