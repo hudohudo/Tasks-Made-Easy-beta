@@ -22,6 +22,6 @@ public class MyPanel extends JPanel
        
        g.setColor(new Color(140,140,140));
        g.fillRect(0,0,320,500);
-       
+
     }
 }

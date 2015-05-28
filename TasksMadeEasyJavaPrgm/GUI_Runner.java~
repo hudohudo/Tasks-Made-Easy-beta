@@ -8,7 +8,7 @@ public class GUI_Runner
         Container cp =runner.getContentPane();
         cp.setBackground(new Color (53, 72, 82));
         
-        runner.setResizable(false);
+        this.setResizable(false);
         
         runner.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
         runner.setLayout(new FlowLayout());

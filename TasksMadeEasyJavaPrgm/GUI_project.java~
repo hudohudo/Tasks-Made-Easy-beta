@@ -43,7 +43,7 @@ public class GUI_project extends JPanel
         
         //Header label
         header = new JLabel();
-        header.setBounds(25,30,180,35);
+        header.setBounds(25,40,180,35);
         header.setBackground(new Color(50,109,255));
         header.setForeground(new Color(0,0,0));
         header.setEnabled(true);
