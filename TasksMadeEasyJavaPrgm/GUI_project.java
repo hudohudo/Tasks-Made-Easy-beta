@@ -150,22 +150,22 @@ public class GUI_project extends JPanel
         dialogueBox.setFont(new Font("Arial",0,13));
         dialogueBox.setBackground(new Color(29,152,136));
         dialogueBox.setForeground(Color.BLACK);
-        dialogueBox.setText("");
         add(dialogueBox);
     }
     private class CreateAction implements ActionListener{
         ArrayList<Task> tasks = new ArrayList<Task>();
         public void actionPerformed(ActionEvent e){
             String name = nameYourTask.getText();
-                int month = Integer.parseInt(DOfMonthText.getText());
-                int day = Integer.parseInt(DOfDayText.getText());
-                int year = Integer.parseInt(DOfYearText.getText());
-                String description = TaskDescribe.getText();
+            int month = Integer.parseInt(DOfMonthText.getText());
+            int day = Integer.parseInt(DOfDayText.getText());
+            int year = Integer.parseInt(DOfYearText.getText());
+            String description = TaskDescribe.getText();
 
-            if(nameYourTask.getText().equals("") ||
-            DOfMonthText.getText().equals("") ||
-            DOfDayText.getText().equals("") ||
-            DOfYearText.getText().equals("")) dialogueBox.setText("Please fill in all the boxes");
+            if(nameYourTask.getText().equals(null) ||
+            DOfMonthText.getText().equals(null) ||
+            DOfDayText.getText().equals(null) ||
+            DOfYearText.getText().equals(null)) 
+             dialogueBox.setText("Please fill in all the boxes");
             else{
                 if(((month==1||month==3||month==5||month==6||month==7||month==8||month==10
                         ||month==12)&&day>31)||((month==4||month==6||month==9||month==11)&&day>30)
@@ -191,6 +191,10 @@ public class GUI_project extends JPanel
                 tasks.add(new Task(name, month, day, year, description));
 
             }
+            
+            //revalidate();
+            
+            
             //This isn't working.
             /*
             if(((month==1||month==3||month==5||month==6||month==7||month==8||month==10
