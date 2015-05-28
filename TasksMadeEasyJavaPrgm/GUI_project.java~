@@ -26,7 +26,8 @@ public class GUI_project extends JPanel
     private JButton createTask;
     private JTextField TaskDescribe;
     private JLabel TaskDescribeHeader;
-    
+    private JTextArea dialogueBox;
+
     private Task createdTask;
 
     //50,109,255 - blue
@@ -40,10 +41,10 @@ public class GUI_project extends JPanel
         setBackground(new Color(29,152,136));
         setPreferredSize(new Dimension(300,500));
         setLayout(null);
-        
+
         //Header label
         header = new JLabel();
-        header.setBounds(25,40,180,35);
+        header.setBounds(25,30,180,35);
         header.setBackground(new Color(50,109,255));
         header.setForeground(new Color(0,0,0));
         header.setEnabled(true);
@@ -62,14 +63,14 @@ public class GUI_project extends JPanel
         TaskDescribeHeader.setText("Description of Task");
         TaskDescribeHeader.setVisible(true);
         add(TaskDescribeHeader);
-        
+
         TaskDescribe = new JTextField(20);
         TaskDescribe.setBounds(25,185,140,35);
         TaskDescribe.setEnabled(true);
         TaskDescribe.setFont(new Font("Arial",0,12));
         TaskDescribe.setVisible(true);
         add(TaskDescribe);
-        
+
         //Name Your task
         nameYourTask = new JTextField(20);
         nameYourTask.setBounds(25,110,140,35);
@@ -141,26 +142,61 @@ public class GUI_project extends JPanel
         createTask.setVisible(true);
         add(createTask);
 
+        //Dialogue box
+        dialogueBox = new JTextArea();
+        dialogueBox.setBounds(25,475,300,20);
+        dialogueBox.setEnabled(true);
+        dialogueBox.setEditable(false);
+        dialogueBox.setFont(new Font("Arial",0,13));
+        dialogueBox.setBackground(new Color(29,152,136));
+        dialogueBox.setForeground(Color.BLACK);
+        dialogueBox.setText("");
+        add(dialogueBox);
     }
     private class CreateAction implements ActionListener{
         ArrayList<Task> tasks = new ArrayList<Task>();
         public void actionPerformed(ActionEvent e){
-            System.out.println(nameYourTask.getText());
-            String name = nameYourTask.getText();
-            int month = Integer.parseInt(DOfMonthText.getText());
-            int day = Integer.parseInt(DOfDayText.getText());
-            int year = Integer.parseInt(DOfYearText.getText());
-            String description = TaskDescribe.getText();
-            if(((month==1||month==3||month==5||month==6||month==7||month==8||month==10||month==12)&&day>31)||((month==4||month==6||month==9||month==11)&&day>30)||(month==2&&day>28&&year%4!=0)||(month==2&&day>29&&year%4==0))
-                {
-                    System.out.println("Not a valid date");
-                }
-                else
-                {
-                    tasks.add(new Task(name, month, day, year, description));
-                }
+            dialogueBox.setText("");
+            if(nameYourTask.getText().equals("") ||
+                DOfMonthText.getText().equals("") ||
+                DOfDayText.getText().equals("") ||
+                DOfYearText.getText().equals("")) dialogueBox.setText("Please fill in all the boxes");
+            else{
+                System.out.println(nameYourTask.getText());
+                String name = nameYourTask.getText();
+                int month = Integer.parseInt(DOfMonthText.getText());
+                int day = Integer.parseInt(DOfDayText.getText());
+                int year = Integer.parseInt(DOfYearText.getText());
+                String description = TaskDescribe.getText();
+                
+                //clears the text fields
+                nameYourTask.setText("");
+                DOfMonthText.setText("");
+                DOfDayText.setText("");
+                DOfYearText.setText("");
+                TaskDescribe.setText("");
+                
+                dialogueBox.setText("New task called " + name + " created");
+                
+                tasks.add(new Task(name, month, day, year, description));
+                
+            }
+            //This isn't working.
+            /*
+            if(((month==1||month==3||month==5||month==6||month==7||month==8||month==10
+            ||month==12)&&day>31)||((month==4||month==6||month==9||month==11)&&day>30)
+            ||(month==2&&day>28&&year%4!=0)||(month==2&&day>29&&year%4==0))
+            {
+            System.out.println("Not a valid date");
+            }
+            else
+            {
+            tasks.add(new Task(name, month, day, year, description));
+            }
+             */
+
             //Collections.sort(tasks);
-            
+
         }
     }
 }
