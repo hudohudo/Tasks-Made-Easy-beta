@@ -18,16 +18,18 @@ public class MyPanel extends JPanel
     }
     public void paintComponent (Graphics g)
     {
-       super.paintComponent(g);
+       //super.paintComponent(g);
        g.setColor(new Color(140,140,140));
        g.fillRect(0,0,320,500);
        
+       g.setColor(Color.BLACK);
        int yval = 50;
        for(int ctr = 0; ctr<TasksMadeEasy.getTaskLists().size(); ctr++)
        {
            g.drawString(TasksMadeEasy.getOneTask(ctr).toString(), 25, yval);
            yval+=yval;
        }
+       repaint();
     }
     
 }
