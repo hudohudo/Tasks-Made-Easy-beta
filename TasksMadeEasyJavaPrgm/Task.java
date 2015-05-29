@@ -41,4 +41,9 @@ public class Task
     {
         return taskDescription;
     }
+    
+    public String toString()
+    {
+        return "New task: " + taskName + "\n" + "Additional Details: " + taskDescription + "\n"  + "It is on " + taskDate.toString();
+    }
 }
