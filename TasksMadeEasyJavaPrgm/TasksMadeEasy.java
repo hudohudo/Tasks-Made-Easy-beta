@@ -5,16 +5,20 @@ public class TasksMadeEasy
 {
 
     //This will not stay public, just need it for testing purposes
-    public ArrayList<Task> myTasks;
-
+    private static ArrayList<Task> myTasks = new ArrayList<Task>();
     public TasksMadeEasy()
     {
         myTasks = new ArrayList<Task>();
     }
 
-    public ArrayList<Task> getTaskLists()
+    public static ArrayList<Task> getTaskLists()
     {
         return myTasks;
+    }
+    
+    public static Task getOneTask(int ind)
+    {
+        return myTasks.get(ind);
     }
 
     // 	public void sortByPriority()
@@ -26,7 +30,7 @@ public class TasksMadeEasy
     // 		return myTasks;
     // 	}
 
-    public void addNewTask(Task t)
+    public static void addNewTask(Task t)
     {
         myTasks.add(t);
     }

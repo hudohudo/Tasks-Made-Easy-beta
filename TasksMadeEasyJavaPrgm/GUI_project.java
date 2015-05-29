@@ -174,7 +174,7 @@ public class GUI_project extends JPanel
                 }
                 else
                 {
-                    tasks.add(new Task(name, month, day, year, description));
+                    TasksMadeEasy.addNewTask(new Task(name, month, day, year, description));
                 }
                 System.out.println(nameYourTask.getText());
                 
@@ -187,7 +187,7 @@ public class GUI_project extends JPanel
 
                 dialogueBox.setText("New task called " + name + " created");
 
-                tasks.add(new Task(name, month, day, year, description));
+                TasksMadeEasy.addNewTask(new Task(name, month, day, year, description));
 
             }
             
