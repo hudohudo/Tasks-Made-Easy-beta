@@ -153,7 +153,6 @@ public class GUI_project extends JPanel
         add(dialogueBox);
     }
     private class CreateAction implements ActionListener{
-        ArrayList<Task> tasks = new ArrayList<Task>();
         public void actionPerformed(ActionEvent e){
             String name = nameYourTask.getText();
             int month = Integer.parseInt(DOfMonthText.getText());
