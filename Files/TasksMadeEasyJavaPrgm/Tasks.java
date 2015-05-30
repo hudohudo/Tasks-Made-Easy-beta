@@ -1,6 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
-public class GUI_Runner
+public class Tasks
 {
     public static void main (String [] args)
     {
