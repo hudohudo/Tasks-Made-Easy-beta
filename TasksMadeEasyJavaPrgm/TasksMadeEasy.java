@@ -34,5 +34,9 @@ public class TasksMadeEasy
     {
         myTasks.add(t);
     }
+    
+    public static void removeTask(int ind){
+        myTasks.remove(ind);
+    }
 
 }

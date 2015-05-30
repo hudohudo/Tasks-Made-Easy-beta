@@ -7,4 +7,6 @@ comment2.params=ind
 comment2.target=Task\ getOneTask(int)
 comment3.params=t
 comment3.target=void\ addNewTask(Task)
-numComments=4
+comment4.params=ind
+comment4.target=void\ removeTask(int)
+numComments=5

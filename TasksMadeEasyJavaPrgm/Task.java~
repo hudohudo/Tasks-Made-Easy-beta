@@ -44,6 +44,6 @@ public class Task
     
     public String toString()
     {
-        return "New task: " + taskName + " - " + taskDescription;
+        return "New task: " + taskName + " - " + taskDescription + "It is on " + taskDate.toString();
     }
 }

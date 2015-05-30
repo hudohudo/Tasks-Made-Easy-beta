@@ -4,14 +4,9 @@ import java.awt.event.*;
 import javax.swing.border.Border;
 import javax.swing.*;
 import java.util.*;
-/**
- * Write a description of class MyPanel here.
- * 
- * @author Eric and Hudson
- * @version (a version number or a date)
- */
 public class MyPanel extends JPanel
-{ 
+{
+    String temp;
     public MyPanel()
     {
         setPreferredSize(new Dimension(320,500));
@@ -26,10 +21,12 @@ public class MyPanel extends JPanel
        int yval = 50;
        for(int ctr = 0; ctr<TasksMadeEasy.getTaskLists().size(); ctr++)
        {
+           temp = TasksMadeEasy.getOneTask(ctr).toString();
+           //g.drawString(temp.substring(0,TasksMadeEasy.getOneTask(ctr).getName().length() + 10 + TasksMadeEasy.getOneTask(ctr).getDescription().length()), 25, yval);
            g.drawString(TasksMadeEasy.getOneTask(ctr).toString(), 25, yval);
+           g.drawString(TasksMadeEasy.getOneTask(ctr).getTaskDate().toString().substring(0,10), 25, yval+13);
            yval+=yval;
        }
        repaint();
     }
-    
 }

@@ -27,13 +27,11 @@ public class GUI_project extends JPanel
     private JTextField TaskDescribe;
     private JLabel TaskDescribeHeader;
     private JTextArea dialogueBox;
+    private JButton removeTask;
+    private JTextField removeTaskText;
 
-    private Task createdTask;
+    private String errorMessage;
 
-    //50,109,255 - blue
-    //217,217,217 - gray
-
-    //Constructor 
     public GUI_project()
     {
 
@@ -150,62 +148,72 @@ public class GUI_project extends JPanel
         dialogueBox.setFont(new Font("Arial",0,13));
         dialogueBox.setBackground(new Color(29,152,136));
         dialogueBox.setForeground(Color.BLACK);
-        dialogueBox.setText("");
         add(dialogueBox);
+
+        //Remove Task
+        removeTask = new JButton();
+        removeTask.addActionListener(new RemoveTaskAction());
+        removeTask.setBounds(25,430,100,35);
+        removeTask.setBackground(new Color(50,109,255));
+        removeTask.setForeground(new Color(0,0,0));
+        removeTask.setEnabled(true);
+        removeTask.setFont(new Font("Arial",0,12));
+        removeTask.setText("Remove Task");
+        removeTask.setVisible(true);
+        add(removeTask);
+
+        removeTaskText = new JTextField(2);
+        removeTaskText.setBounds(133,435,40,28);
+        removeTaskText.setEnabled(true);
+        removeTaskText.setFont(new Font("Arial",0,10));
+        add(removeTaskText);
     }
     private class CreateAction implements ActionListener{
-        ArrayList<Task> tasks = new ArrayList<Task>();
         public void actionPerformed(ActionEvent e){
-            if(nameYourTask.getText().equals("") ||
-            DOfMonthText.getText().equals("") ||
-            DOfDayText.getText().equals("") ||
-            DOfYearText.getText().equals("")) dialogueBox.setText("Please fill in all the boxes");
-            else{
-                if(((month==1||month==3||month==5||month==6||month==7||month==8||month==10
-                        ||month==12)&&day>31)||((month==4||month==6||month==9||month==11)&&day>30)
-                ||(month==2&&day>28&&year%4!=0)||(month==2&&day>29&&year%4==0))
-                {
-                    dialogueBox.setText("Not a valid date");
-                }
-                else
-                {
-                    tasks.add(new Task(name, month, day, year, description));
-                }
-                System.out.println(nameYourTask.getText());
+            System.out.println("Test");
+            if(nameYourTask.getText().equals("")||DOfMonthText.getText().equals("")||DOfDayText.getText().equals("")||DOfYearText.getText().equals("")) 
+                dialogueBox.setText("Please fill in all the boxes");
+            else
+            {
                 String name = nameYourTask.getText();
                 int month = Integer.parseInt(DOfMonthText.getText());
                 int day = Integer.parseInt(DOfDayText.getText());
                 int year = Integer.parseInt(DOfYearText.getText());
                 String description = TaskDescribe.getText();
-
-                //clears the text fields
-                nameYourTask.setText("");
-                DOfMonthText.setText("");
-                DOfDayText.setText("");
-                DOfYearText.setText("");
-                TaskDescribe.setText("");
-
-                dialogueBox.setText("New task called " + name + " created");
-
-                tasks.add(new Task(name, month, day, year, description));
-
+                if((month<12) || ((month==1 || month==3 || month==5 || month==6 || month==7 || month==8 || month==10 || month==12) && day<31)
+                || ((month==4 || month==6 || month==9 || month==11) && day<30)
+                || (month==2 && day<28 && year%4!=0) || (month==2 && day<29 && year%4==0))
+                {
+                    TasksMadeEasy.addNewTask(new Task(name, month, day, year, description));
+                    dialogueBox.setText("New task called " + name + " created");
+                    //clears the text fields
+                    nameYourTask.setText("");
+                    DOfMonthText.setText("");
+                    DOfDayText.setText("");
+                    DOfYearText.setText("");
+                    TaskDescribe.setText("");
+                }
+                else
+                {
+                    dialogueBox.setText("Invalid date");
+                }
             }
-            //This isn't working.
-            /*
-            if(((month==1||month==3||month==5||month==6||month==7||month==8||month==10
-            ||month==12)&&day>31)||((month==4||month==6||month==9||month==11)&&day>30)
-            ||(month==2&&day>28&&year%4!=0)||(month==2&&day>29&&year%4==0))
-            {
-            System.out.println("Not a valid date");
-            }
-            else
-            {
-            tasks.add(new Task(name, month, day, year, description));
-            }
-             */
-
-            //Collections.sort(tasks);
-
         }
+    }
+    private class RemoveTaskAction implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+            int ind = Integer.parseInt(removeTaskText.getText());
+            try {
+                TasksMadeEasy.removeTask(ind-1);
+                dialogueBox.setText("Task removed");
+            } catch (IndexOutOfBoundsException error) {
+                errorMessage = error.getMessage();
+                dialogueBox.setText("Invalid index");
+            }
+            removeTaskText.setText("");
+        }
+    }
+    public String getErrorMessage(){
+        return errorMessage;
     }
 }
