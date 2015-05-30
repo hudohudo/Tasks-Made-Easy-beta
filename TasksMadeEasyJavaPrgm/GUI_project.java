@@ -29,6 +29,7 @@ public class GUI_project extends JPanel
     private JTextArea dialogueBox;
     private JButton removeTask;
     private JTextField removeTaskText;
+    private JLabel removeTaskLabel;
 
     private String errorMessage;
 
@@ -167,6 +168,16 @@ public class GUI_project extends JPanel
         removeTaskText.setEnabled(true);
         removeTaskText.setFont(new Font("Arial",0,10));
         add(removeTaskText);
+        
+        removeTaskLabel = new JLabel();
+        removeTaskLabel.setBounds(135,425,180,10);
+        removeTaskLabel.setBackground(new Color(50,109,255));
+        removeTaskLabel.setForeground(new Color(0,0,0));
+        removeTaskLabel.setEnabled(true);
+        removeTaskLabel.setFont(new Font("Arial",0,10));
+        removeTaskLabel.setText("Index");
+        removeTaskLabel.setVisible(true);
+        add(removeTaskLabel);
     }
     private class CreateAction implements ActionListener{
         public void actionPerformed(ActionEvent e){
